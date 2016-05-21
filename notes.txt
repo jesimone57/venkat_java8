@@ -1,0 +1,67 @@
+core principles of functional programming:
+  1. functions as values,
+  2. immutability,
+  3. statelessness.
+
+
+programs that are expressed as stateless transformations on immutable data!
+
+We want to be functional (think functions):
+  1. pass   functions to     functions
+  2. create functions within functions
+  3. return functions from   functions
+
+
+Predicates:
+   A Predicate<T> takes in one parameter of type T and returns a boolean result to
+   indicate a decision for whatever check it represents.
+   Used to filter something like filter does.
+
+   Examples:
+         IntPredicate isDivisible = divisor -> number % divisor == 0;  // takes an integer
+
+Method References:
+   Good candidates for method references are when we take input and just pass it along   (e ->  System.out.println(e))
+      .filter(Primes::isPrime)
+      .forEach(System.out::println);
+
+Functions:
+   a Function<T, R> rep- resents a function that takes a parameter of type T and
+   returns a result of type R. This is more general than a Predicate that always returns a boolean.
+   Used to transform something like map does.
+
+
+
+//////////////////
+     Examples
+/////////////////
+
+Iteration:
+    .forEach
+          people.forEach(System.out::println);
+
+Selections:
+    .filter
+    .noneMatch
+
+
+Transformations:
+    .map
+    .mapToInt      creates an IntStream
+    .mapToDouble   creates a DoubleStream
+    .mapToLong
+
+Reducers:
+    .sum
+    .max
+    .min
+    .average
+    .reduce        The result of the reduce() method is an Optional because the list on which reduce() is called may be empty.
+          .reduce((name1, name2) -> name1.length() >= name2.length() ? name1 : name2);
+          .reduce(0, (len1, len2) -> len1 + len2));   // same as .sum
+    .collect
+           .collect(Collectors.toList());
+           .collect(Collectors.toSet());
+           .collect(Collectors.toMap());
+           .collect(Collectors.groupingBy(Person::getAge));
+           .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
