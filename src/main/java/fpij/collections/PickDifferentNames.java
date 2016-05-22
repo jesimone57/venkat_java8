@@ -9,6 +9,12 @@ import java.util.function.Predicate;
  * Created by jsimone on 12/9/15.
  */
 public class PickDifferentNames {
+
+    // filter takes a Predicate object so we define one here:
+    public static Predicate<String> checkIfStartsWith(final String letter) {
+        return name -> name.startsWith(letter);
+    }
+
     public static void main(String[] args) {
 
         final List<String> friends  = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
@@ -33,12 +39,5 @@ public class PickDifferentNames {
         final long count3FriendsStartN = friends.stream().filter(startsWithLetter.apply("N")).count();
         final long countF3riendsStartB = friends.stream().filter(startsWithLetter.apply("B")).count();
     }
-
-    // filter takes a Predicate object so we define one here:
-    public static Predicate<String> checkIfStartsWith(final String letter) {
-        return name -> name.startsWith(letter);
-    }
-
-
 
 }
