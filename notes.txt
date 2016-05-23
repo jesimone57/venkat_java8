@@ -43,6 +43,8 @@ Iteration:
 Selections:
     .filter
     .noneMatch
+    .limit         limit results size to be not greater than n
+    .skip          skip over the first n elements in the stream
 
 
 Transformations:
