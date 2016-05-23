@@ -11,6 +11,7 @@ We want to be functional (think functions):
   2. create functions within functions
   3. return functions from   functions
 
+Declarative Style of programming - tell what you want not HOW to do it
 
 Predicates:
    A Predicate<T> takes in one parameter of type T and returns a boolean result to
