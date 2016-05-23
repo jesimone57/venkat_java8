@@ -4,10 +4,10 @@ package functions;
  * Created by jsimone on 5/22/16.
  */
 public enum Dept {
-	SALES,
+	DEVELOPMENT,
+	FINANCE,
+	HUMAN_RESOURCES,
 	MARKETING,
 	RESEARCH,
-	FINANCE,
-	DEVELOPMENT,
-	HUMAN_RESOURCES;
+	SALES
 }

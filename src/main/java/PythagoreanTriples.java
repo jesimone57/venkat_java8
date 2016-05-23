@@ -67,7 +67,7 @@ public class PythagoreanTriples {
     }
 
     public static Stream<String> generatePythagoreanTriplesUpto(int m) {
-        return IntStream.range(1, m)  // (1,2)-> 1,2, (1,3)->1,2,3, (1,4)->1,2,3,4, (1,5)
+        return IntStream.range(1, m)  // (1,2) -> 1,2, (1,3) -> 1,2,3, (1,4) -> 1,2,3,4, (1,5) -> 1,2,3,4,5
                 .boxed()
                 .map(n -> generatePythagoreanTriple(m, n));
     }

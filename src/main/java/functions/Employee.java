@@ -6,7 +6,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Created by jsimone on 5/22/16.
  */
-public class Person implements Comparable {
+public class Employee implements Comparable {
 
 	private String name;
 	private Integer age;
@@ -14,9 +14,9 @@ public class Person implements Comparable {
 	private LocalDate hireDate;
 	private Gender gender;
 
-	public Person() {
+	public Employee() {
 	}
-	public Person(String name, int age, Dept dept, String hireDate, Gender gender) {
+	public Employee(String name, int age, Dept dept, String hireDate, Gender gender) {
 		this.name = name;
 		this.age = age;
 		this.dept = dept;
@@ -71,6 +71,6 @@ public class Person implements Comparable {
 
 	@Override
 	public int compareTo(Object o) {
-		return this.getAge().compareTo(((Person) o).getAge());
+		return this.getAge().compareTo(((Employee) o).getAge());
 	}
 }
